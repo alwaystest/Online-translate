@@ -20,7 +20,7 @@
 // @resource icon  http://translate.google.cn/favicon.ico
 // @resource extlink  https://raw.githubusercontent.com/alwaystest/Online-translate/master/4Z98bz0c6spVD4yLtBRMKN
 // @resource load  https://raw.githubusercontent.com/alwaystest/Online-translate/master/6ztD7bMU7z4dOJKfHs8XtD
-// @updateURL 
+// @updateURL  https://github.com/alwaystest/Online-translate/raw/master/Online_translate.user.js
 // ==/UserScript==
 
 /**
