@@ -17,13 +17,14 @@
 // @grant		GM_registerMenuCommand
 // @grant		GM_setValue
 // @grant		GM_xmlhttpRequest
-// @resource icon  http://translate.google.cn/favicon.ico
+// @resource icon  http://translate.google.com/favicon.ico
 // @resource extlink  https://raw.githubusercontent.com/alwaystest/Online-translate/master/4Z98bz0c6spVD4yLtBRMKN
 // @resource load  https://raw.githubusercontent.com/alwaystest/Online-translate/master/6ztD7bMU7z4dOJKfHs8XtD
 // @updateURL  https://github.com/alwaystest/Online-translate/raw/master/Online_translate.user.js
 // ==/UserScript==
 
 /**
+* 2014-11-01 mod fix: add Grant for GM 2.X , fix response link , fix update URL.change google.cn to google.com.
 * 2012-01-12 bug fix: baiduEle is empty when baidu request first; editor normal, don't apply this ...
 * 2012-01-11 new opt: remove single word, add query input when translatedivcontainer on dbclick ...; notice: if query input is exit, translatedivcontainer can not be hide when keypress 'G'; remove copyToClipboard listener ...
 * 2012-01-11 new opt: add single word to show when request word is like end with 's', 'es', 'ed' ...
@@ -937,7 +938,7 @@ function getTranslateText() {
     text = encodeURIComponent(text);
     var len = text.length;
     var method = len > 1500 ? 'POST' : 'GET';
-    var url = 'http://translate.google.cn/translate_a/t';
+    var url = 'http://translate.google.com/translate_a/t';
     var data = 'client=t&text=' + text + '&hl=en&sl=' + arrLanMap[arrLanFromTo[0]] + '&tl=' + arrLanMap[arrLanFromTo[1]];
     if (method == 'GET'){
         url += '?' + data;
